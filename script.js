@@ -12,6 +12,7 @@ console.log(color2);
 console.log(body);
 */
 
+// changes the background of the page and displays the users input as text on page when the user changes input on the buttons.
 function setGradient() {
 	body.style.background = 
 	"linear-gradient(to right, " 
@@ -22,6 +23,19 @@ function setGradient() {
 
 	css.textContent = body.style.background + ";";
 }
+
+// loads initial css on page load
+onload = function setGradient() {
+	body.style.background = 
+	"linear-gradient(to right, " 
+	+ color1.value 
+	+ ", " 
+	+ color2.value 
+	+ ")";
+
+	css.textContent = body.style.background + ";";
+}
+
 
 color1.addEventListener("input", setGradient);
 
